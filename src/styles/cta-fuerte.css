@@ -1,0 +1,103 @@
+/* CTA Fuerte */
+.cta-fuerte {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #7AC943 0%, #5a9a2e 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.cta-button-container {
+  margin-bottom: 3rem;
+}
+
+.btn-cta-grande {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  background: white;
+  color: #7AC943;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta-grande:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+}
+
+.cta-confianza {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.confianza-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.confianza-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.confianza-text {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .cta-fuerte {
+    padding: 3rem 0;
+  }
+  
+  .cta-title {
+    font-size: 2rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .btn-cta-grande {
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .cta-confianza {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .confianza-item {
+    font-size: 1rem;
+  }
+}
+

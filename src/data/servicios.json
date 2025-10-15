@@ -1,0 +1,109 @@
+{
+  "servicios": [
+    {
+      "id": 1,
+      "titulo": "Publicidad Paga",
+      "descripcion": "Creamos campañas publicitarias estratégicas que maximizan tu ROI y generan leads de calidad. Optimizamos cada centavo de tu inversión publicitaria.",
+      "icono": "🎯",
+      "href": "/servicios/publicidad-paga",
+      "caracteristicas": [
+        "Campañas en Google Ads y Meta Ads",
+        "Segmentación avanzada de audiencias",
+        "Optimización automática de pujas",
+        "Análisis de competencia y mercado",
+        "A/B testing de creatividades",
+        "Reportes de rendimiento en tiempo real"
+      ],
+      "beneficios": [
+        "Aumento del 300% en conversiones",
+        "Reducción del 40% en costo por lead",
+        "ROI promedio de 4:1",
+        "Escalabilidad garantizada"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Comunicación de Ventas",
+      "descripcion": "Transformamos tu proceso de ventas con estrategias de comunicación que convierten más leads en clientes fieles y rentables.",
+      "icono": "🚀",
+      "href": "/servicios/comunicacion-ventas",
+      "caracteristicas": [
+        "Scripts de ventas personalizados",
+        "Automatización de follow-up",
+        "Email marketing estratégico",
+        "Secuencias de nurturing",
+        "Chatbots inteligentes",
+        "CRM optimizado"
+      ],
+      "beneficios": [
+        "Mejora del 250% en tasa de cierre",
+        "Reducción del 60% en tiempo de venta",
+        "Aumento del 180% en retención",
+        "Procesos 100% automatizados"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Desarrollo Web y Apps",
+      "descripcion": "Construimos experiencias digitales excepcionales que impulsan tu negocio. Desde sitios web hasta aplicaciones móviles personalizadas.",
+      "icono": "⚡",
+      "href": "/servicios/desarrollo-web-apps",
+      "caracteristicas": [
+        "Sitios web de alto rendimiento",
+        "Aplicaciones móviles nativas",
+        "E-commerce con conversión optimizada",
+        "Integración con sistemas existentes",
+        "SEO técnico implementado",
+        "Mantenimiento y soporte 24/7"
+      ],
+      "beneficios": [
+        "Aumento del 200% en velocidad de carga",
+        "Mejora del 150% en conversiones",
+        "Reducción del 80% en tasa de rebote",
+        "Experiencia de usuario premium"
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "Automatizaciones",
+      "descripcion": "Automatizamos tus procesos más importantes para que puedas enfocarte en hacer crecer tu negocio. Eficiencia máxima, esfuerzo mínimo.",
+      "icono": "🤖",
+      "href": "/servicios/automatizaciones",
+      "caracteristicas": [
+        "Workflows de marketing automatizados",
+        "Integración entre plataformas",
+        "Automatización de tareas repetitivas",
+        "Notificaciones inteligentes",
+        "Análisis predictivo",
+        "Optimización continua"
+      ],
+      "beneficios": [
+        "Ahorro del 70% en tiempo operativo",
+        "Reducción del 90% en errores humanos",
+        "Aumento del 300% en productividad",
+        "Escalabilidad sin límites"
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "Análisis Estratégico",
+      "descripcion": "Convertimos tus datos en decisiones inteligentes. Análisis profundo que revela oportunidades ocultas de crecimiento.",
+      "icono": "📈",
+      "href": "/servicios/analisis-estrategico",
+      "caracteristicas": [
+        "Análisis de datos avanzado",
+        "Dashboards personalizados",
+        "Reportes automáticos",
+        "Análisis de competencia",
+        "Predicciones de mercado",
+        "Recomendaciones estratégicas"
+      ],
+      "beneficios": [
+        "Mejora del 400% en toma de decisiones",
+        "Reducción del 50% en costos operativos",
+        "Aumento del 250% en eficiencia",
+        "Ventaja competitiva sostenible"
+      ]
+    }
+  ]
+}

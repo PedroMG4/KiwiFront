@@ -1,0 +1,329 @@
+/* Servicios Hero */
+.servicios-hero {
+  padding: 6rem 0 4rem;
+  background: linear-gradient(135deg, #7AC943 0%, #5a9a2e 100%);
+  color: white;
+  text-align: center;
+}
+
+.servicios-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicios-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.servicios-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.servicios-hero-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Verticales Detalladas */
+.verticales-detalladas {
+  padding: 5rem 0;
+  background: white;
+}
+
+.vertical-item {
+  margin-bottom: 6rem;
+}
+
+.vertical-item:last-child {
+  margin-bottom: 0;
+}
+
+.vertical-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.vertical-item.imagen-derecha .vertical-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.vertical-item.imagen-izquierda .vertical-content {
+  grid-template-columns: 1fr 1fr;
+}
+
+.vertical-item.imagen-derecha .vertical-texto {
+  order: 1;
+}
+
+.vertical-item.imagen-derecha .vertical-imagen {
+  order: 2;
+}
+
+.vertical-item.imagen-izquierda .vertical-texto {
+  order: 2;
+}
+
+.vertical-item.imagen-izquierda .vertical-imagen {
+  order: 1;
+}
+
+.vertical-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.vertical-icon {
+  font-size: 2.5rem;
+}
+
+.vertical-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.vertical-descripcion {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.vertical-incluye,
+.vertical-ideal,
+.vertical-tipos,
+.vertical-niveles,
+.vertical-beneficios {
+  margin-bottom: 2rem;
+}
+
+.vertical-incluye h4,
+.vertical-ideal h4,
+.vertical-tipos h4,
+.vertical-beneficios h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7AC943;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.vertical-niveles .nivel-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.vertical-incluye ul,
+.vertical-ideal ul,
+.vertical-tipos ul,
+.vertical-niveles ul,
+.vertical-beneficios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-incluye li,
+.vertical-ideal li,
+.vertical-tipos li,
+.vertical-niveles li,
+.vertical-beneficios li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.vertical-cta {
+  margin-top: 2rem;
+}
+
+.vertical-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-placeholder {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px dashed #ddd;
+}
+
+/* Servicios Integrados */
+.servicios-integrados {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.integrados-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.integrados-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.integrados-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.integrados-ejemplos {
+  margin-bottom: 3rem;
+}
+
+.ejemplo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ejemplo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.ejemplo-arrow {
+  font-size: 1.5rem;
+  color: #7AC943;
+  font-weight: bold;
+}
+
+.ejemplo-texto {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* CTA Final */
+.servicios-cta-final {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-final-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-final-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-final-texto {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicios-hero {
+    padding: 4rem 0 3rem;
+  }
+  
+  .servicios-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .servicios-hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .servicios-hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .verticales-detalladas {
+    padding: 3rem 0;
+  }
+  
+  .vertical-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .vertical-item.imagen-derecha .vertical-content,
+  .vertical-item.imagen-izquierda .vertical-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .vertical-item.imagen-derecha .vertical-texto,
+  .vertical-item.imagen-izquierda .vertical-texto {
+    order: 1;
+  }
+  
+  .vertical-item.imagen-derecha .vertical-imagen,
+  .vertical-item.imagen-izquierda .vertical-imagen {
+    order: 2;
+  }
+  
+  .vertical-titulo {
+    font-size: 1.8rem;
+  }
+  
+  .vertical-descripcion {
+    font-size: 1rem;
+  }
+  
+  .imagen-placeholder {
+    height: 250px;
+  }
+  
+  .integrados-title {
+    font-size: 2rem;
+  }
+  
+  .cta-final-title {
+    font-size: 2rem;
+  }
+  
+  .cta-final-texto {
+    font-size: 1.1rem;
+  }
+}
+

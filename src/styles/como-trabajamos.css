@@ -1,0 +1,121 @@
+/* Cómo Trabajamos - 4 Pasos */
+.como-trabajamos {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+}
+
+.como-trabajamos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.como-trabajamos-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pasos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.paso-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.paso-item:hover {
+  transform: translateY(-8px);
+  background: rgba(122, 201, 67, 0.2);
+  border-color: #7AC943;
+}
+
+.paso-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.paso-content {
+  flex: 1;
+}
+
+.paso-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.paso-descripcion {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+.paso-arrow {
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #7AC943;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .como-trabajamos {
+    padding: 3rem 0;
+  }
+  
+  .como-trabajamos-title {
+    font-size: 2rem;
+  }
+  
+  .pasos-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .paso-item {
+    padding: 1.5rem;
+  }
+  
+  .paso-arrow {
+    display: none;
+  }
+  
+  .paso-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pasos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .paso-arrow:nth-child(2n) {
+    display: none;
+  }
+}
+

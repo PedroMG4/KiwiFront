@@ -1,0 +1,76 @@
+{
+  "equipo": [
+    {
+      "id": 1,
+      "nombre": "Florencia Almada",
+      "cargo": "Co-Fundadora",
+      "area": "Comunicación & Ventas",
+      "especialidad": "Estrategia de Comunicación y Desarrollo de Ventas",
+      "experiencia": "5+ años",
+      "descripcion": "Especialista en comunicación estratégica y desarrollo de procesos de ventas que generan resultados medibles.",
+      "imagen": "/assets/team/florencia.jpg",
+      "linkedin": "https://linkedin.com/in/florenciaalmada",
+      "email": "florencia@kiwimarketing.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Mauro Alcaraz",
+      "cargo": "Co-Fundador",
+      "area": "Estrategia & Publicidad",
+      "especialidad": "Estrategia Digital y Campañas Publicitarias",
+      "experiencia": "6+ años",
+      "descripcion": "Experto en estrategias digitales y campañas publicitarias que impulsan el crecimiento empresarial.",
+      "imagen": "/assets/team/mauro.jpg",
+      "linkedin": "https://linkedin.com/in/mauroalcaraz",
+      "email": "mauro@kiwimarketing.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Pedro Martin Garay",
+      "cargo": "Desarrollador Principal",
+      "area": "Web & Automatizaciones",
+      "especialidad": "Desarrollo Web y Sistemas de Automatización",
+      "experiencia": "4+ años",
+      "descripcion": "Desarrollador especializado en soluciones web y automatizaciones que optimizan procesos empresariales.",
+      "imagen": "/assets/team/pedro.jpg",
+      "linkedin": "https://linkedin.com/in/pedrodev",
+      "email": "pedro@kiwimarketing.com"
+    },
+    {
+      "id": 4,
+      "nombre": "Valentín Acevedo",
+      "cargo": "Especialista en Publicidad Paga",
+      "area": "Meta Ads",
+      "especialidad": "Campañas de Meta Ads y Publicidad Paga",
+      "experiencia": "3+ años",
+      "descripcion": "Especialista en Meta Ads con historial comprobado de optimización de campañas y mejora de ROI.",
+      "imagen": "/assets/team/valentin.jpg",
+      "linkedin": "https://linkedin.com/in/valentinacevedo",
+      "email": "valentin@kiwimarketing.com"
+    },
+    {
+      "id": 5,
+      "nombre": "Tomás Ilia Soto",
+      "cargo": "Publicidad & Comunicación",
+      "area": "Ads + Contenido",
+      "especialidad": "Publicidad Digital y Creación de Contenido",
+      "experiencia": "4+ años",
+      "descripcion": "Experto en publicidad digital y creación de contenido que conecta con audiencias objetivo.",
+      "imagen": "/assets/team/tomas.jpg",
+      "linkedin": "https://linkedin.com/in/tomasiliasoto",
+      "email": "tomas@kiwimarketing.com"
+    },
+    {
+      "id": 6,
+      "nombre": "Agustín Ozuna",
+      "cargo": "Creación de Contenido",
+      "area": "Producción y Edición",
+      "especialidad": "Producción Audiovisual y Edición de Contenido",
+      "experiencia": "3+ años",
+      "descripcion": "Especialista en producción y edición de contenido audiovisual de alta calidad.",
+      "imagen": "/assets/team/agustin.jpg",
+      "linkedin": "https://linkedin.com/in/agustinozuna",
+      "email": "agustin@kiwimarketing.com"
+    }
+  ]
+}
