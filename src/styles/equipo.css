@@ -1,301 +1,655 @@
-.equipo-page {
-  padding: 6rem 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+/* ========================================
+   ESTILOS PARA PÁGINA DE EQUIPO
+   ======================================== */
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.equipo-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
   position: relative;
   overflow: hidden;
 }
 
-.equipo-page::before {
+.equipo-hero::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(122, 201, 67, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(122, 201, 67, 0.05) 0%, transparent 50%);
+  width: 50%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  z-index: 1;
 }
 
-.equipo-header {
+.equipo-hero-content {
   text-align: center;
-  margin-bottom: 4rem;
   position: relative;
   z-index: 2;
-}
-
-.equipo-header h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #1A1A1A;
-  margin-bottom: 1.5rem;
-}
-
-.equipo-header p {
-  font-size: 1.3rem;
-  color: #1A1A1A;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-.team-structure {
-  position: relative;
-  z-index: 2;
+.equipo-hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: white;
+  -webkit-text-fill-color: white;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1A1A1A;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+.equipo-hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.section-title::after {
-  content: '';
+.equipo-hero-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+/* Flecha de scroll */
+.scroll-indicator {
   position: absolute;
-  bottom: -10px;
+  bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #7AC943, rgba(122, 201, 67, 0.5), #7AC943);
-  border-radius: 2px;
+  z-index: 10;
+  animation: bounce-scroll 2s infinite;
 }
 
-/* Co-fundadores - Disposición horizontal */
-.cofounders-section {
-  margin-bottom: 6rem;
+.scroll-arrow {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
-.cofounders-grid {
+.scroll-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: scale(1.1);
+}
+
+.scroll-arrow::after {
+  content: '↓';
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: arrow-bounce 1.5s infinite;
+}
+
+@keyframes bounce-scroll {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+/* ========================================
+   CO-FUNDADORES
+   ======================================== */
+.cofundadores-section {
+  padding: 8rem 0;
+  background: white;
+}
+
+.cofundadores-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Resto del equipo - Disposición 2x2 */
-.team-section {
-  margin-bottom: 4rem;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.team-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+.cofundador-card {
+  background: white;
   border-radius: 25px;
-  box-shadow: 
-    0 15px 50px rgba(0, 0, 0, 0.1),
-    0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border: 1px solid rgba(122, 201, 67, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  position: relative;
 }
 
-.team-card::before {
+.cofundador-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #7AC943, rgba(122, 201, 67, 0.5), #7AC943);
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
 }
 
-.team-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 
-    0 25px 70px rgba(122, 201, 67, 0.15),
-    0 15px 40px rgba(0, 0, 0, 0.1);
+.cofundador-card:hover {
+  transform: translateY(-15px);
+  border-color: #7AC943;
+  box-shadow: 0 30px 60px rgba(122, 201, 67, 0.2);
 }
 
-.team-card-image {
+.cofundador-foto {
+  height: 300px;
   position: relative;
-  padding: 3rem 2rem 1rem;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(122, 201, 67, 0.1) 0%, transparent 100%);
+  overflow: hidden;
 }
 
-.team-avatar {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, #7AC943 0%, rgba(122, 201, 67, 0.8) 100%);
-  border-radius: 50%;
+.foto-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(122, 201, 67, 0.3);
-  transition: transform 0.3s ease;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
 }
 
-.team-card:hover .team-avatar {
-  transform: scale(1.1);
+.foto-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s infinite;
 }
 
-.team-initials {
-  font-size: 2.5rem;
+.cofundador-content {
+  padding: 3rem;
+}
+
+.cofundador-content h3 {
+  font-size: 2rem;
   font-weight: 800;
-  color: #FFFFFF;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.team-card-overlay {
+.cofundador-rol {
+  font-size: 1.2rem;
+  color: #666666;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.especialidades {
+  margin-bottom: 2rem;
+}
+
+.especialidades h4 {
+  font-size: 1.1rem;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.especialidades ul {
+  list-style: none;
+}
+
+.especialidades li {
+  padding: 0.5rem 0;
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cofundador-bio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 2rem;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.red-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #F8F9FA;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #666666;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.red-social:hover {
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(122, 201, 67, 0.3);
+}
+
+/* ========================================
+   ESPECIALISTAS
+   ======================================== */
+.especialistas-section {
+  padding: 8rem 0;
+  background: #F8F9FA;
+}
+
+.especialistas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.especialista-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.especialista-card::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(122, 201, 67, 0.9) 0%, rgba(122, 201, 67, 0.7) 100%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
 }
 
-.team-card:hover .team-card-overlay {
-  opacity: 1;
+.especialista-card:hover {
+  transform: translateY(-10px);
+  border-color: #7AC943;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
-.team-social {
-  display: flex;
-  gap: 1rem;
+.especialista-foto {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
 }
 
-.social-link {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+.especialista-content {
+  padding: 2rem;
+}
+
+.especialista-content h3 {
   font-size: 1.5rem;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.social-link:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-.team-card-content {
-  padding: 0 2rem 3rem;
-}
-
-.team-role-badge {
-  display: inline-block;
-  background: linear-gradient(135deg, #7AC943 0%, rgba(122, 201, 67, 0.8) 100%);
-  color: #FFFFFF;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.team-name {
-  font-size: 1.8rem;
   font-weight: 700;
-  color: #1A1A1A;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.team-area {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.area-label {
-  font-weight: 600;
-  color: #1A1A1A;
-  font-size: 0.9rem;
-}
-
-.area-value {
-  background: rgba(122, 201, 67, 0.1);
-  color: #7AC943;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.team-specialty {
-  color: #1A1A1A;
-  font-weight: 500;
-  margin-bottom: 1rem;
+.especialista-rol {
   font-size: 1rem;
-}
-
-.team-experience {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-  color: #7AC943;
+  color: #666666;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
-.experience-icon {
-  font-size: 1.2rem;
+.especialista-area {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-bottom: 1.5rem;
+  font-style: italic;
 }
 
-.team-description {
-  color: #1A1A1A;
+.especialista-bio {
+  font-size: 1rem;
   line-height: 1.6;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  color: #444444;
+  margin-bottom: 1.5rem;
 }
 
+.especialista-card .redes-sociales {
+  justify-content: center;
+}
+
+.especialista-card .red-social {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   CULTURA
+   ======================================== */
+.cultura-section {
+  padding: 8rem 0;
+  background: white;
+}
+
+.cultura-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cultura-text {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.cultura-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cultura-descripcion {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 2rem;
+}
+
+.cultura-destacado {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #2C3E50;
+  background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid #7AC943;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.valor-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.valor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+}
+
+.valor-card:hover {
+  transform: translateY(-10px);
+  border-color: #7AC943;
+  box-shadow: 0 20px 40px rgba(122, 201, 67, 0.2);
+}
+
+.valor-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.valor-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.valor-card p {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ========================================
+   CTA FINAL
+   ======================================== */
+.equipo-cta {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
+  text-align: center;
+}
+
+.equipo-cta .cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-cta .cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========================================
+   ELEMENTOS FLOTANTES Y PARALLAX
+   ======================================== */
+.parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-element-1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 2rem;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element-2 {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  font-size: 1.8rem;
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.floating-element-3 {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  font-size: 2.2rem;
+  opacity: 0.1;
+  animation: float 7s ease-in-out infinite;
+}
+
+.floating-element-4 {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  font-size: 1.6rem;
+  opacity: 0.1;
+  animation: float 9s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* ========================================
+   EFECTOS ADICIONALES
+   ======================================== */
+.cofundador-card:hover .foto-placeholder::before {
+  animation-duration: 1s;
+}
+
+.especialista-card:hover .foto-placeholder::before {
+  animation-duration: 1s;
+}
+
+.valor-card:hover .valor-icon {
+  animation: bounce 1s ease-in-out;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
 @media (max-width: 768px) {
-  .equipo-header h1 {
+  .equipo-hero {
+    min-height: 70vh;
+  }
+  
+  .equipo-hero-title {
     font-size: 2.5rem;
   }
   
-  .section-title {
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+  
+  .scroll-arrow {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .equipo-hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .equipo-hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .cofundadores-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cofundador-content {
+    padding: 2rem;
+  }
+  
+  .cofundador-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .especialistas-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .valores-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .valor-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .cultura-text h2 {
     font-size: 2rem;
   }
   
-  .cofounders-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .team-card {
-    margin: 0 1rem;
-  }
-  
-  .cofounders-section {
-    margin-bottom: 4rem;
+  .equipo-cta .cta-content h2 {
+    font-size: 2rem;
   }
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+@media (max-width: 480px) {
+  .equipo-hero-title {
+    font-size: 2rem;
+  }
+  
+  .equipo-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .cofundador-content {
+    padding: 1.5rem;
+  }
+  
+  .especialista-content {
+    padding: 1.5rem;
+  }
+  
+  .valor-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cultura-destacado {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .redes-sociales {
+    justify-content: center;
   }
 }

@@ -1,77 +1,529 @@
-.contacto-page {
-  padding: 4rem 0;
-  min-height: 80vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.contacto-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
   position: relative;
+  overflow: hidden;
 }
 
-.contacto-page::before {
+.contacto-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.contacto-hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  color: white;
+  -webkit-text-fill-color: white;
+}
+
+.contacto-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* ========================================
+   MAIN CONTACT SECTION
+   ======================================== */
+.contacto-main {
+  padding: 6rem 0;
+  background: #F8F9FA;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   FORMULARIO
+   ======================================== */
+.formulario-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.formulario-container::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(122, 201, 67, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(122, 201, 67, 0.05) 0%, transparent 50%);
+  height: 4px;
+  background: linear-gradient(90deg, #7AC943, rgba(122, 201, 67, 0.5), #7AC943);
 }
 
-.contacto-page h1 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1A1A1A;
-  font-size: 3.5rem;
-  font-weight: 800;
-  position: relative;
-  z-index: 2;
-}
-
-.contacto-page p {
-  text-align: center;
-  font-size: 1.3rem;
-  color: #1A1A1A;
-  max-width: 600px;
-  margin: 0 auto 4rem;
-  position: relative;
-  z-index: 2;
-}
-
-.contacto-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  z-index: 2;
-}
-
-.contacto-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.info-section {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.1),
-    0 3px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(122, 201, 67, 0.1);
-}
-
-.info-section h3 {
-  color: #1A1A1A;
-  font-size: 1.5rem;
+.formulario-contacto h3 {
+  color: #2C3E50;
+  font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 0.95rem;
+}
+
+.form-group input:not(.checkbox-input),
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(122, 201, 67, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #F8F9FA;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group input:not(.checkbox-input):focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #7AC943;
+  box-shadow: 0 0 0 3px rgba(122, 201, 67, 0.1);
+  transform: translateY(-2px);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%237AC943' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.checkbox-group {
+  margin-bottom: 2rem;
+}
+
+.checkbox-label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #2C3E50;
+}
+
+.checkbox-input {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 !important;
+  margin-right: 10px !important;
+  cursor: pointer;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-self: flex-start;
+}
+
+.checkbox-text {
+  cursor: pointer;
+}
+
+/* Estilos para errores de validación */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group.error label {
+  color: #e74c3c;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(122, 201, 67, 0.3);
+}
+
+.btn-enviar:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(122, 201, 67, 0.4);
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  margin: 0 auto 1.5rem;
+}
+
+.mensaje-exito h3 {
+  color: #2C3E50;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-exito p {
+  color: #666666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-nueva-consulta {
+  background: transparent;
+  color: #7AC943;
+  border: 2px solid #7AC943;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-nueva-consulta:hover {
+  background: #7AC943;
+  color: white;
+}
+
+/* ========================================
+   INFO DE CONTACTO
+   ======================================== */
+.info-contacto {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.info-contacto h3 {
+  color: #2C3E50;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contacto-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+.contacto-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.contacto-item.whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  border-bottom: none;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.contacto-item.whatsapp:hover {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.8) 0%, rgba(18, 140, 126, 0.8) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+}
+
+.contacto-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.contacto-icon {
+  font-size: 1.5rem;
+}
+
+.contacto-header h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contacto-dato {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #666666;
+}
+
+.contacto-item.whatsapp .contacto-dato {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-whatsapp,
+.btn-email,
+.btn-instagram {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-email {
+  background: #7AC943;
+  color: white;
+  border: 1px solid #7AC943;
+}
+
+.btn-email:hover {
+  background: #5A9A2F;
+  transform: translateY(-2px);
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #E4405F, #F77737);
+  color: white;
+  border: 1px solid #E4405F;
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(228, 64, 95, 0.3);
+}
+
+/* ========================================
+   PROMESA DE CONTACTO
+   ======================================== */
+.promesa-contacto {
+  padding: 4rem 0;
+  background: white;
+}
+
+.promesa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.promesa-item {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  background: #F8F9FA;
+  transition: all 0.3s ease;
+}
+
+.promesa-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(122, 201, 67, 0.2);
+}
+
+.promesa-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 auto 1rem;
+}
+
+.promesa-item h4 {
+  color: #2C3E50;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ========================================
+   FAQ SECTION
+   ======================================== */
+.faq-section {
+  padding: 6rem 0;
+  background: #F8F9FA;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.faq-pregunta {
+  color: #2C3E50;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.faq-respuesta {
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================
+   CTA FINAL
+   ======================================== */
+.contacto-cta-final {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
+  text-align: center;
+}
+
+.contacto-cta-final .cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-cta-final .cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-whatsapp-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 16px 32px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.btn-whatsapp-final:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
 }
 
 .contact-item {
@@ -196,7 +648,7 @@
   background: #ffffff;
 }
 
-.form-group input::placeholder,
+.form-group input:not(.checkbox-input)::placeholder,
 .form-group textarea::placeholder {
   color: rgba(26, 26, 26, 0.5);
   font-style: italic;
@@ -279,39 +731,40 @@
   font-style: italic;
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 @media (max-width: 1024px) {
-  .contacto-container {
+  .contacto-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
   
-  .contacto-info {
-    order: 2;
+  .info-contacto {
+    position: static;
   }
   
-  .form-contacto {
-    order: 1;
+  .promesa-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .contacto-page {
-    padding: 2rem 0;
-  }
-  
-  .contacto-page h1 {
+  .contacto-hero-title {
     font-size: 2.5rem;
   }
   
-  .contacto-page p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+  .contacto-hero-subtitle {
+    font-size: 1.2rem;
   }
   
-  .contacto-container {
-    padding: 0 1rem;
-    gap: 2rem;
+  .contacto-main {
+    padding: 4rem 0;
+  }
+  
+  .formulario-container {
+    padding: 2rem 1.5rem;
   }
   
   .form-row {
@@ -319,18 +772,24 @@
     gap: 1rem;
   }
   
-  .form-contacto {
+  .info-contacto {
     padding: 2rem 1.5rem;
   }
   
-  .info-section {
-    padding: 1.5rem;
+  .promesa-contacto {
+    padding: 3rem 0;
   }
   
-  .contact-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+  .faq-section {
+    padding: 4rem 0;
+  }
+  
+  .contacto-cta-final {
+    padding: 4rem 0;
+  }
+  
+  .contacto-cta-final .cta-content h2 {
+    font-size: 2rem;
   }
 }
 

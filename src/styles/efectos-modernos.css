@@ -1,0 +1,436 @@
+/* ========================================
+   EFECTOS MODERNOS Y ANIMACIONES AVANZADAS
+   ======================================== */
+
+/* ========================================
+   GRADIENTES Y EFECTOS DE FONDO
+   ======================================== */
+.gradient-bg-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-bg-2 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-bg-3 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.gradient-bg-4 {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.gradient-bg-5 {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* ========================================
+   EFECTOS DE HOVER AVANZADOS
+   ======================================== */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-glow {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(122, 201, 67, 0.5);
+}
+
+/* ========================================
+   EFECTOS DE TEXTO
+   ======================================== */
+.text-gradient {
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   EFECTOS DE BORDE
+   ======================================== */
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #7AC943, #5A9A2F) border-box;
+}
+
+.border-dashed {
+  border: 2px dashed #7AC943;
+  border-radius: 20px;
+  padding: 2rem;
+  background: rgba(122, 201, 67, 0.05);
+}
+
+/* ========================================
+   EFECTOS DE PARTÍCULAS (SIMULADOS)
+   ======================================== */
+.particles-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particles-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(122, 201, 67, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(122, 201, 67, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(122, 201, 67, 0.05) 0%, transparent 50%);
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ========================================
+   EFECTOS DE CARDS AVANZADOS
+   ======================================== */
+.card-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card-neon {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #7AC943, #5A9A2F, #7AC943) border-box;
+  position: relative;
+}
+
+.card-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #7AC943, #5A9A2F, #7AC943);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-neon:hover::before {
+  opacity: 1;
+}
+
+/* ========================================
+   EFECTOS DE LOADING Y ANIMACIONES
+   ======================================== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(122, 201, 67, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(122, 201, 67, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(122, 201, 67, 0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* ========================================
+   EFECTOS DE SCROLL
+   ======================================== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   EFECTOS DE HOVER PARA ICONOS
+   ======================================== */
+.icon-hover {
+  transition: all 0.3s ease;
+}
+
+.icon-hover:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 5px 15px rgba(122, 201, 67, 0.3));
+}
+
+/* ========================================
+   EFECTOS DE BOTONES AVANZADOS
+   ======================================== */
+.btn-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover {
+  transform: translateY(-3px) rotateX(10deg);
+}
+
+.btn-3d::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: inherit;
+  transform: translateZ(-1px);
+  transition: all 0.3s ease;
+}
+
+.btn-3d:hover::before {
+  top: 0;
+}
+
+/* ========================================
+   EFECTOS DE TARJETAS FLIP
+   ======================================== */
+.card-flip {
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front, .card-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #7AC943 0%, #5A9A2F 100%);
+  color: white;
+}
+
+/* ========================================
+   EFECTOS DE PROGRESO
+   ======================================== */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(122, 201, 67, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7AC943, #5A9A2F);
+  border-radius: 4px;
+  transition: width 1s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========================================
+   EFECTOS DE MODAL Y OVERLAY
+   ======================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+/* ========================================
+   EFECTOS DE TEXTO ANIMADO
+   ======================================== */
+.text-typewriter {
+  overflow: hidden;
+  border-right: 2px solid #7AC943;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #7AC943;
+  }
+}
+
+/* ========================================
+   EFECTOS RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .card-flip {
+    height: 250px;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .particles-bg::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-flip {
+    height: 200px;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+  }
+}

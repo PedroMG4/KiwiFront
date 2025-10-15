@@ -252,11 +252,13 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 .cta-final-texto {
   font-size: 1.3rem;
   margin-bottom: 3rem;
+  color: white;
   opacity: 0.9;
 }
 
@@ -326,4 +328,5 @@
     font-size: 1.1rem;
   }
 }
+
 
