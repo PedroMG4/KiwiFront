@@ -12,6 +12,10 @@ body {
   line-height: 1.6;
   color: #1A1A1A;
   background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -82,7 +86,7 @@ p {
 
 .cta-button--secondary {
   background: transparent;
-  color: #7AC943;
+  color: #FFFFFF;
   border: 2px solid #7AC943;
   box-shadow: 0 8px 25px rgba(122, 201, 67, 0.2);
 }

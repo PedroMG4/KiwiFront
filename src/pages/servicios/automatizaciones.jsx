@@ -113,7 +113,7 @@ export default function Automatizaciones() {
         <div className="container">
           <div className="servicio-hero-content">
             <div className="servicio-hero-text animate-slide-up">
-              <span className="servicio-icon icon-hover animate-rotate">🤖</span>
+              <span className="servicio-icon icon-hover">🤖</span>
               <h1 className="servicio-hero-title text-shadow">Automatización: De Simple a Inteligente</h1>
               <h2 className="servicio-hero-subtitle">Tu equipo más confiable que nunca se enferma</h2>
               <p className="servicio-hero-description">

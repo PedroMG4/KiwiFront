@@ -1,14 +1,14 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 3rem 0 1rem;
+  padding: 4rem 0 1rem;
   margin-top: 4rem;
 }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -42,6 +42,41 @@
   margin-bottom: 0.5rem;
 }
 
+.footer-tagline {
+  color: #7AC943 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem !important;
+}
+
+.footer-copyright {
+  color: #999 !important;
+  font-size: 0.9rem;
+  margin-bottom: 0 !important;
+}
+
+.footer-contact p {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-contact strong {
+  color: #7AC943;
+  font-weight: 600;
+}
+
+.footer-contact a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #7AC943;
+}
+
 .footer-section ul {
   list-style: none;
 }
@@ -71,9 +106,91 @@
   margin: 0;
 }
 
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #7AC943;
+}
+
+.footer-legal span {
+  color: #555;
+}
+
+.footer-dev {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.footer-dev p {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
   .footer-logo-image {
     height: 28px !important;
     max-width: 100px !important;
+  }
+  
+  .footer-contact p {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footer-content {
+    gap: 1.5rem;
+  }
+  
+  .footer-tagline {
+    font-size: 1rem;
+  }
+  
+  .footer-contact p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
   }
 }

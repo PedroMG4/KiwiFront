@@ -28,3 +28,4 @@ const TeamParallax = () => {
 };
 
 export default TeamParallax;
+

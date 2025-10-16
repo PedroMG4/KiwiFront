@@ -15,6 +15,11 @@
   -webkit-text-fill-color: white;
 }
 
+.publicidad-hero .servicio-hero-description {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .plataformas-publicidad {
   padding: 6rem 0;
   background: white;
@@ -673,3 +678,4 @@
     padding: 2rem;
   }
 }
+
