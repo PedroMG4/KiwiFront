@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -9,9 +10,9 @@ export default function Footer() {
           {/* COLUMNA 1: Branding */}
           <div className="footer-section">
             <div className="footer-logo">
-              <img 
-                src="/assets/img/logoSOLO.png" 
-                alt="Kiwi Marketing Logo" 
+              <Logo 
+                width={130}
+                height={35}
                 className="footer-logo-image"
               />
             </div>

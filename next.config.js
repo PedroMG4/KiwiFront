@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['localhost'],
+    unoptimized: false,
   },
   async rewrites() {
     return [
@@ -13,6 +14,9 @@ const nextConfig = {
       },
     ];
   },
+  // Configuración para archivos estáticos
+  trailingSlash: false,
+  generateEtags: false,
 };
 
 module.exports = nextConfig;

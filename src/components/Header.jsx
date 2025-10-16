@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,11 +11,10 @@ export default function Header() {
         <div className="container">
           <div className="header-content">
             <Link href="/" className="logo">
-              <img 
-                src="/assets/img/logoSOLO.png" 
-                alt="Kiwi Marketing Logo" 
-                className="logo-image"
-              />
+            <Logo 
+              className="logo-image"
+              priority={true}
+            />
             </Link>
             
             <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -24,12 +24,15 @@ export default function Header() {
               <Link href="/contacto">Contacto</Link>
             </nav>
 
-            <button 
-              className="menu-toggle"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              ☰
-            </button>
+          <button 
+            className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
           </div>
         </div>
       </header>
